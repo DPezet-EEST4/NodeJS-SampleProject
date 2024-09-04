@@ -32,19 +32,23 @@ Proyecto
 ├───node_modules
 │       ...
 ├───config
-│       db.js
+│       ...
 ├───controllers
+│       auth.controller.js
 │       track.controller.js
 │       usuario.controller.js
-├───models
-│       track.model.js
-│       usuario.model.js
+├───middlewares
+│        auth.js
+├───prisma
+│        schema.prisma
 ├───routes
+│        auth.routes.js
 │        tracks.routes.js
 │        usuarios.routes.js
 │   .env                  # Variables de entorno
 │   .gitignore            # Archivos que git deberia ignorar
 │   index.js
+│   package.json
 │   README.md             # Descripcion del proyecto
 ```
 
@@ -54,4 +58,4 @@ Proyecto
 - **config/**: Contiene configuraciones adicionales que serán necesarias en caso de usar servicios, por ejemplo
 - **routes/**: Deberá tener todas las rutas correspondientes a la entidad que representa junto con una llamada al controlador correspondiente
 - **controllers/**: Deberá tener la lógica que se deberá ejecutar al acceder a la ruta que lo invoca
-- **models/**: Contiene la información sobre la entidad en cuestión
+- **prisma/**: Contiene la conexión a la DB y sus tablas dentro del archivo *schema.prisma*
